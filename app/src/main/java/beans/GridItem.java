@@ -17,7 +17,7 @@ public class GridItem {
 
     private int value;
 
-    private String toView;
+
 
     public int getValue() {
         return value;
@@ -43,11 +43,4 @@ public class GridItem {
         this.type = type;
     }
 
-    public String getToView() {
-        return toView;
-    }
-
-    public void setToView(String toView) {
-        this.toView = toView;
-    }
 }

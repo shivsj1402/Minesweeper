@@ -7,12 +7,11 @@
     tools:context="com.example.shiv.minesweeper.MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="18dp"
         android:text="Start/Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,19 +19,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.017"
         app:layout_constraintHorizontal_bias="0.142"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/mygrid" />
+        android:layout_above="@+id/mygrid"
+        android:layout_toStartOf="@+id/time"
+        android:layout_marginBottom="12dp" />
 
     <GridView
         android:id="@+id/mygrid"
         android:layout_width="359dp"
-        android:layout_height="369dp"
+        android:layout_height="300dp"
         android:numColumns="9"
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="91dp"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
+        android:verticalSpacing="3dp"
+        android:background="@color/grey"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/time"
@@ -43,9 +44,69 @@
         tools:layout_editor_absoluteY="16dp"
         android:textSize="30sp"
         android:gravity="center"
-        android:layout_marginEnd="24dp"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignEnd="@+id/mygrid" />
+
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignEnd="@+id/button3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="basic"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intermediate"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button3"
+        android:layout_alignEnd="@+id/mygrid"
+        android:layout_marginEnd="11dp"
+        android:text="advanced" />
+
+    <TextView
+        android:id="@+id/mcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button4"
+        android:layout_marginStart="14dp"
+        android:text="00"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/time"
+        android:layout_alignEnd="@+id/button4"
+        android:layout_alignBottom="@+id/time" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignEnd="@+id/time"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="20dp"
+        android:text="Timer"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/button1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/mcount"
+        android:layout_alignTop="@+id/textView"
+        android:text="Mine Count" />
 
 
 </RelativeLayout>

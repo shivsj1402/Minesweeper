@@ -1,13 +1,9 @@
 package services;
 
 import com.example.shiv.minesweeper.CustomGridAdapter;
-import com.example.shiv.minesweeper.MainActivity;
 import com.example.shiv.minesweeper.R;
-
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.GridView;
-
 import beans.GridItem;
 
 /**
@@ -21,9 +17,10 @@ public class RendererService {
 
         for (int i = 0; i < 9; i++) {
             for (int j=0; j<9; j++){
-//                if(items[i][j].getState() == false){
-                if(false){
+                if(items[i][j].getState() == false){
                     view[i][j] = " ";
+
+
                 }else{
                     if(items[i][j].getType() == 0){
                         view[i][j] = "_";
